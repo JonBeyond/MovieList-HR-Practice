@@ -1,0 +1,19 @@
+{
+  "name": "movielist-react-practice",
+  "version": "1.0.0",
+  "description": "extra practice with react for hack reactor program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonBeyond/MovieList-HR-Practice.git"
+  },
+  "author": "Jonathan Mitzman <jonathan.mitzman@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/JonBeyond/MovieList-HR-Practice/issues"
+  },
+  "homepage": "https://github.com/JonBeyond/MovieList-HR-Practice#readme"
+}
