@@ -4,7 +4,8 @@
   "description": "extra practice with react for hack reactor program",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel . --watch --out-dir compiled --presets=react --ignore=node_modules,compiled --source-maps inline"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/JonBeyond/MovieList-HR-Practice/issues"
   },
-  "homepage": "https://github.com/JonBeyond/MovieList-HR-Practice#readme"
+  "homepage": "https://github.com/JonBeyond/MovieList-HR-Practice#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-react": "^1.0.0",
+    "babel-preset-react": "^6.24.1",
+    "live-server": "^1.2.1"
+  }
 }
