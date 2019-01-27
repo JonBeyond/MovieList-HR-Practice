@@ -1,0 +1,35 @@
+body {
+    background: #ab8dbc;
+  }
+
+.search {
+    margin-left: 100px;
+    color: black;
+}
+
+.add {
+    margin-left: 100px;
+    color: black;
+}
+
+.movie-list {
+    margin-left: 100px;
+    color: black;
+}
+
+.add {
+    font-weight: bold;
+}
+
+.search {
+    font-weight: bold;
+}
+
+.movie-list {
+    font-weight: bold;
+}
+
+.movie-name {
+    font-weight: normal;
+    color: black;
+}
