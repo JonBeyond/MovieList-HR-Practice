@@ -1,10 +1,12 @@
 import MovieList from "./movielist.js";
-import MovieEntry from "./movieentry.js";
-// import React from 'react'
+import MovieEntry from "./MovieEntry.js";
+import MovieData from "../data/movielist.js";
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            movieList: MovieData
+        };
     }
 
     //state change funtions go here when needed.
@@ -13,7 +15,7 @@ class App extends React.Component {
         return (
             <div>
                 <div className="movie-list">
-                    <div><MovieList /></div>
+                    <div><MovieList movies={MovieData}/></div>
                 </div>
             </div>
         )

@@ -1,21 +1,15 @@
-// import React from 'react'
+import MovieEntry from "./MovieEntry.js";
 
-var MovieList = () => (
-    <div className="movie-list">
-      <div><h5><em>videoListEntry</em> view goes here</h5></div>
-      <div><h5><em>videoListEntry</em> view goes here</h5></div>
-      <div><h5><em>videoListEntry</em> view goes here</h5></div>
-      <div><h5><em>videoListEntry</em> view goes here</h5></div>
-      <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    </div>
-  );
+var MovieList = (props) => {
+    console.log('hi');
+    return (
+        <div className="movie-list"> The Movie List:
+            {props.movies.map(item => {
+                return <MovieEntry movie={item} />
+            })}
+        </div>
+    );
+}
 
-  // PropTypes tell other developers what `props` a component expects
-  // Warnings will be shown in the console when the defined rules are violated
-//   MovieList.propTypes = {
-//     movies: React.PropTypes.array.isRequired
-//   };
+export default MovieList;
 
-  // In the ES6 spec, files are "modules" and do not share a top-level scope.
-  // `var` declarations will only exist globally where explicitly defined.
-  export default MovieList;
