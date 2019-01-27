@@ -2,6 +2,9 @@ import MovieList from "./movielist.js";
 import MovieEntry from "./MovieEntry.js";
 import MovieData from "../data/movielist.js";
 import SearchBar from "./SearchBar.js";
+import MovieInput from "./MovieInput.js";
+
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -10,25 +13,34 @@ class App extends React.Component {
         };
     }
 
-    //state change funtions go here when needed.
     onSearch(string) {
-        console.log(this);
-        //search moviedata entires for string, if contains in totle, put into a new array, and change state to new array.
-        //if no entries, need to display 'no entries'
         let filteredMovies = MovieData.filter(movie => movie.title.includes(string));
-
+        if (filteredMovies.length === 0) {
+            filteredMovies.push({title: 'No results found'});
+        }
         this.setState({
             movieList: filteredMovies
         });
+    }
 
-        console.log('updated list:'+this.state.movieList);
+    onAdd(string){
+        let newMov = {title: string};
+        let curList = this.state.movieList;
+        curList.push(newMov);
+        this.setState({
+            movieList: curList
+        });
     }
 
     render() {
         return (
             <div>
-                <div className="search"> Search Bar Here
+                <div className="search"> Search Movies:
                     <div><SearchBar search={this.onSearch.bind(this)}/></div>
+                </div>
+                <br></br>
+                <div className="add">Add New Movie:
+                    <div><MovieInput add={this.onAdd.bind(this)}/></div>
                 </div>
                 <br></br><br></br>
                 <div className="movie-list">
