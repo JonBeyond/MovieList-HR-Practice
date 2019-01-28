@@ -8,5 +8,3 @@ var SearchBar = (props) => {
 }
 
 export default SearchBar;
-
-//onClick={() => props.changeVideo(props.video)}

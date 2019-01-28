@@ -4,7 +4,9 @@ var MovieList = (props) => {
     return (
         <div className="movie"> The Movie List:
             {props.movies.map(item => {
-                return <MovieEntry movie={item} />
+                if(!item.watched) {
+                    return <MovieEntry movie={item} watch={props.watch}/>
+                }
             })}
         </div>
     );

@@ -1,1 +1,1 @@
-This is a basic react app that keeps track of a movie list.  Current functionality allows you to add new movies and search for results.
+This is a basic react app that keeps track of a movie list.  Current functionality allows you to add new movies and search for results.x
